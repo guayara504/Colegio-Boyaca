@@ -1,0 +1,66 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<h1>Contacto</h1>
+<form id="registro-form" class="row g-3">
+  <div class="col-md-6">
+    <label for="nombre" class="form-label">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" class="form-control" required>
+  </div>
+  <div class="col-md-6">
+    <label for="sexo" class="form-label">Sexo:</label>
+    <select id="sexo" name="sexo" class="form-select" required>
+      <option value="">Seleccione una opción</option>
+      <option value="masculino">Masculino</option>
+      <option value="femenino">Femenino</option>
+      <option value="otro">Otro</option>
+    </select>
+  </div>
+  <div class="col-md-6">
+    <label for="correo" class="form-label">Correo:</label>
+    <input type="email" id="correo" name="correo" class="form-control" required>
+  </div>
+  <div class="col-md-6">
+    <label for="telefono" class="form-label">Teléfono:</label>
+    <input type="tel" id="telefono" name="telefono" class="form-control" required>
+  </div>
+  <div class="col-md-6">
+    <label for="rol" class="form-label">Rol:</label>
+    <select id="rol" name="rol" class="form-select" required>
+      <option value="">Seleccione una opción</option>
+      <option value="docente">Docente</option>
+      <option value="estudiante">Estudiante</option>
+      <option value="padre_familia">Padre de familia</option>
+    </select>
+  </div>
+  <div class="col-md-6">
+    <label for="mensaje" class="form-label">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje" class="form-control"></textarea>
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Registrarse</button>
+  </div>
+
+
+  <script>
+    function mostrarRegistro() {
+      var nombre = document.getElementById("nombre").value;
+      var sexo = document.getElementById("sexo").value;
+      var correo = document.getElementById("correo").value;
+      var telefono = document.getElementById("telefono").value;
+      var rol = document.getElementById("rol").value;
+      var mensaje = document.getElementById("mensaje").value;
+    
+      alert("Registro:\n\nNombre: " + nombre + "\nSexo: " + sexo + "\nCorreo: " + correo + "\nTeléfono: " + telefono + "\nRol: " + rol + "\nMensaje: " + mensaje);
+    }
+    
+    document.getElementById("registro-form").addEventListener("submit", function(event){
+      event.preventDefault();
+      mostrarRegistro();
+    });
+    </script>
+
+</form>
+
+{% endblock  %}

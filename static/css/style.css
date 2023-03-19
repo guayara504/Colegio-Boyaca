@@ -1,0 +1,15 @@
+body{
+    background: rgb(224, 240, 242);
+}
+
+.title{
+    color: #ff0a33;
+    font-size:50px;
+    font-style: italic;
+    text-align: center;
+}
+
+.titulosIndex {
+    color: #2196f3;
+}
+
